@@ -1,6 +1,6 @@
 <template>
   <q-page padding>
-   HOME- {{ title }}
+    HOME- {{ title }}
 
     <!-- ✅ Same on server & client -->
     <div v-if="store.loading">Loading...</div>
