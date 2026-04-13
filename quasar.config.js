@@ -71,7 +71,9 @@ export default defineConfig((ctx) => {
             ssr: ctx.modeName === 'ssr',
 
             // you need to set i18n resource including paths !
-            include: [fileURLToPath(new URL('./src/i18n', import.meta.url))],
+            // include: [fileURLToPath(new URL('./src/i18n', import.meta.url))],
+
+            include: ['./src/i18n/**'],
           },
         ],
 
