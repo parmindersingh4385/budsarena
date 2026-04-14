@@ -6,7 +6,6 @@
   "author": "Parminder singh <singh1.parminder@gmail.com>",
   "type": "module",
   "private": true,
-  "packageManager": "npm@10",
   "scripts": {
     "lint": "eslint -c ./eslint.config.js \"./src*/**/*.{js,cjs,mjs,vue}\"",
     "format": "prettier --write \"**/*.{js,vue,scss,html,md,json}\" --ignore-path .gitignore",
