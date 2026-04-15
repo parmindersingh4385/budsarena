@@ -9,7 +9,7 @@ export const useProductStore = defineStore('products', {
   actions: {
     async fetchProducts() {
       try {
-        const res = await fetch('https://mocki.io/v1/fcdbb180-5fce-45b9-aeeb-7a02b21c18ff')
+        const res = await fetch('https://mocki.io/v1/0385ec32-2a79-4963-8df6-e152e71bb6b4')
         const data = await res.json()
 
         this.items = Array.isArray(data) ? data : []
