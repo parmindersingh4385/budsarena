@@ -22,9 +22,7 @@
     "quasar": "^2.16.0",
     "vue": "^3.5.22",
     "vue-i18n": "^11.0.0",
-    "vue-router": "^5.0.0"
-  },
-  "devDependencies": {
+    "vue-router": "^5.0.0",
     "@eslint/js": "^9.14.0",
     "@intlify/unplugin-vue-i18n": "^4.0.0",
     "@quasar/app-vite": "^2.6.0",
