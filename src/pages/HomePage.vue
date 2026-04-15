@@ -14,6 +14,7 @@
 <script setup>
 import { ref, onServerPrefetch } from 'vue'
 import { useProductStore } from 'src/stores/products'
+//import { useMeta } from 'quasar'
 
 const title = ref('Compare Best Earbuds 🔥')
 
@@ -26,10 +27,4 @@ onServerPrefetch(async () => {
     await store.fetchProducts()
   }
 })
-
-/* onMounted(async () => {
-  if (!store.items.length) {
-    await store.fetchProducts()
-  }
-}) */
 </script>

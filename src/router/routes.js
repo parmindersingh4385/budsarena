@@ -6,6 +6,11 @@ const routes = [
     children: [{ path: '', component: () => import('pages/HomePage.vue') }],
   },
   {
+    path: '/compare/:slug',
+    name: 'comparison',
+    component: () => import('pages/compare/ComparePage.vue'),
+  },
+  {
     path: '/:catchAll(.*)*',
     component: () => import('pages/ErrorNotFound.vue'),
   },
