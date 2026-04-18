@@ -8,13 +8,19 @@
   <br />
 
   {{ p2DataObj.name }} - {{ getTotalSpecsScore(p2DataObj) }}
+
+  <br />
+
+  Winner is {{ winnerBud }}
 </template>
 
 <script setup>
-import { onServerPrefetch } from 'vue'
+import { onServerPrefetch, ref } from 'vue'
 import { useRoute } from 'vue-router'
 
 const route = useRoute()
+
+const winnerBud = ref('')
 
 const slug = route.params.slug
 
@@ -51,6 +57,12 @@ const p2DataObj = {
 
 function getTotalSpecsScore(product) {
   return Object.values(product.specifications).reduce((total, val) => total + val, 0)
+}
+
+if (getTotalSpecsScore(p1DataObj) > getTotalSpecsScore(p2DataObj)) {
+  winnerBud.value = p1DataObj.name
+} else {
+  winnerBud.value = p2DataObj.name
 }
 
 // ✅ SSR-safe data fetching
