@@ -1,15 +1,34 @@
 const routes = [
   {
     path: '/',
-    // component: () => import('pages/HomePage.vue')
     component: () => import('layouts/MainLayout.vue'),
     children: [{ path: '', component: () => import('pages/HomePage.vue') }],
   },
   {
+    path: '/explore',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [{ path: '', component: () => import('pages/ExplorePage.vue') }],
+  },
+  {
+    path: '/compare',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [{ path: '', component: () => import('pages/ComparePage.vue') }],
+  },
+  {
+    path: '/recent',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [{ path: '', component: () => import('pages/RecentPage.vue') }],
+  },
+  {
+    path: '/profile',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [{ path: '', component: () => import('pages/ProfilePage.vue') }],
+  },
+  /* {
     path: '/compare/:slug',
     name: 'comparison',
     component: () => import('pages/compare/ComparePage.vue'),
-  },
+  }, */
   {
     path: '/:catchAll(.*)*',
     component: () => import('pages/ErrorNotFound.vue'),
@@ -19,21 +38,3 @@ const routes = [
 ]
 
 export default routes
-
-/* const routes = [
-  {
-    path: '/',
-    component: () => import('layouts/MainLayout.vue'),
-    children: [{ path: '', component: () => import('pages/IndexPage.vue') }],
-  },
-
-  // Always leave this as last one,
-  // but you can also remove it
-  {
-    path: '/:catchAll(.*)*',
-    component: () => import('pages/ErrorNotFound.vue'),
-  },
-]
-
-export default routes
- */
